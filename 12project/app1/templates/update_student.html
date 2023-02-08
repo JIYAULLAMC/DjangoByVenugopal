@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>this is update data</h1>
+    <form method="POST">
+        {% csrf_token %}
+      <tr>
+        <th><label for="id_first_name">First name:</label></th>
+        <td>
+          <input
+            type="text"
+            name="first_name"
+            maxlength="50"
+            required
+            id="id_first_name"
+            value="{{sdata.first_name}}"
+          />
+        </td>
+      </tr><br />
+
+      <tr>
+        <th><label for="id_last_name">Last name:</label></th>
+        <td>
+          <input
+            type="text"
+            name="last_name"
+            maxlength="50"
+            required
+            id="id_last_name"
+            value="{{sdata.last_name}}"
+          />
+        </td>
+      <tr> <br />
+        <th><label for="id_Phone">Phone:</label></th>
+        <td>
+          <input
+            type="number"
+            name="phone"
+            required
+            id="id_phone"
+            value="{{sdata.phone}}"
+          />
+        </td>
+      <tr> <br />
+        <th><label for="id_email">Last name:</label></th>
+        <td>
+          <input
+            type="email"
+            name="email"
+            required
+            id="id_email"
+            value="{{sdata.email}}"
+          />
+        </td>
+      </tr><br />
+      <tr>
+        <th><label for="id_password">Last name:</label></th>
+        <td>
+          <input
+            type="password"
+            name="password"
+            required
+            id="id_password"
+            value="{{sdata.password}}"
+          />
+        </td>
+      </tr><br />
+      <input type="submit" value="submit" />
+      <input type="reset" value="reset" />
+    </form>
+  </body>
+</html>

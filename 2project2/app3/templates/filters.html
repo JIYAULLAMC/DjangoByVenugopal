@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        {% load create_tags %}
+</head>
+<body>
+    <h1>Curstom filters</h1>
+    <p>{{ var| first_tag}}</p>
+    <p>{{ var| firstfive}}</p>
+    ------------------------------------------------------```                                   
+    
+    <h1>string filters</h1>
+    <h2>row data : {{var}}</h2>
+    <h2>Result : {{var|title}}</h2>
+    <h2>Result : {{var|capfirst}}</h2>
+    <h2>Result : {{var|upper}}</h2>
+    <h2>Result : {{var|lower}}</h2>
+    <h2>Result : {{var|length}}</h2>
+    <h2>Result : {{var|wordcount}}</h2>
+    {# <h2>Result : {{var|add : " Banglore"}}</h2>  #}
+    <h2>Result : {{var.5}}</h2>
+    <h2>Result : {{var|slice:"0:10:1"}}</h2>
+    <h2>Result : {{var|slice:"0:40:2"}}</h2>
+    <h2>Result : {{var|slice:"0::"}}</h2>
+    <h2>Result : {{var|slice:"0::-1"}}</h2>
+    <h2>Result : {{var|first}}</h2>
+    <h2>Result : {{var|last}}</h2>
+    
+    <h1>list filters -------------------></h1>
+    <h2>row data : {{var1}}</h2>
+    <h2>Result : {{var1|first}}</h2>
+    <h2>Result : {{var1|last}}</h2>
+    <h2>Result : {{var|length}}</h2>
+    <h2>Result : {{var1.5}}</h2>
+    <h2>Result : {{var1|slice:"0:10:1"}}</h2>
+    <h2>Result : {{var1|slice:"0:40:2"}}</h2>
+    <h2>Result : {{var1|slice:"0::"}}</h2>
+    <h2>Result : {{var1|slice:"0::-1"}}</h2>
+    <h2>Result : {{var1|random}}</h2>
+    <h2>Result : {{var1|unordered_list}}</h2>
+</body>
+</html>

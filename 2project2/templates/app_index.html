@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+        margin: 0px;
+      }
+      .container {
+        width: 1300px;
+        background-color: rgb(175, 236, 216);
+      }
+      
+      .topheading {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 100px;
+      }
+      
+      .nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        width: 600px;
+      }
+      .nav ul li {
+        width: 150px;
+        height: 50px;
+        border: 2px solid blue;
+        border-radius: 10px;
+        vertical-align: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        font-size: 20px;
+      }
+      .main1 {
+        height: 600px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .profile_image {
+        width: 400px;
+        background-color: aqua;
+        height: 500px;
+        margin: 30px;
+        border: 1px solid black;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .greet {
+        margin: 30px;
+        font-size: 70px;
+      }
+      .name {
+        color: rgb(253, 106, 106);
+      }
+      
+      /* main2 */
+      .schools {
+        display: flex;
+      }
+      .school {
+        width: 400px;
+        background-color: blueviolet;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        border: 0px solid black;
+        border-radius: 20px;
+      }
+      .schoolchild {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+      }
+      .schoolimg {
+        width: 350px;
+        height: 400px;
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border: 0px solid black;
+        border-radius: 20px;
+      }
+      .school_detail {
+        text-align: justify;
+      }
+      
+      /* main3 ----------------- */
+      
+      .main3 {
+        height: 600px;
+        background-color: rgb(129, 253, 80);
+        border: 0px solid black;
+        border-radius: 0px 100% 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .mydiv {
+        width: 1000px;
+        height: 500px;
+        float: right;
+      }
+      
+      .html{
+          width: 1200px;
+          height: 40px;
+      }
+      
+      .bubble {
+        height: 150px;
+        width: 150px;
+        background-color: rgb(255, 152, 152);
+        float: right;
+        border: 30px solid rgb(249, 253, 13);
+        border-radius: 50%;
+      }
+      
+      .content{
+        font-size: 20px;
+        overflow: hidden;
+      }
+      
+      .bubble2{
+        /* width: 100px; */
+        /* height: 100px; */
+        background-color: coral;
+        border: 30px solid black;
+        border-radius: 20px;
+      }
+      .triblock  {
+        display: flex;
+        flex-direction: column;
+        
+      }
+      .containers{
+        overflow-y: scroll;
+        
+      }
+      .triblock div{
+        margin: 10px;
+        width: auto;
+        height: 60px;
+        background-color: rgb(226, 43, 89);
+        transform: skew(20px 20px);
+        padding: 10px;
+        margin: 10px;
+        border: 0px solid gray;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="topheading">
+          <h1>Nav your self</h1>
+        </div>
+      </header>
+      <main>
+        <div>
+          <div class="main1">
+            <div>
+              <div class="profile_image">
+                <img src="" alt="Profile Image" />
+              </div>
+            </div>
+            <div>
+              <div class="greet">
+                <div class="bubble"></div>
+                <p>
+                  Hello! I'm <span class="name"> Jiyaulla</span>, <br />a
+                  Meachanical Engineer based in Karnataka
+                </p>
+              </div>
+              <div class="nav">
+                <ul>
+                  <li>
+                    <p>Home</p>
+                  </li>
+                  <li>
+                    <p>Education</p>
+                  </li>
+                  <li>
+                    <p>Content</p>
+                  </li>
+                  <li>
+                    <p>About</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="main2">
+            <div class="schools">
+              <div class="school">
+                <div class="schoolchild">
+                  <div class="schoolimg">
+                    <img src="highschooe" alt="school image" />
+                  </div>
+                  <div class="school_detail">
+                    <div>
+                      <h3>Name of institution</h3>
+                    </div>
+                    <div>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt eveniet commodi delectus doloremque magnam fuga
+                      consequuntur dignissimos numquam aperiam fugiat nisi odio,
+                      eaque alias ipsum!
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="school">
+                <div class="schoolchild">
+                  <div class="schoolimg">
+                    <img src="highschooe" alt="school image" />
+                  </div>
+                  <div class="school_detail">
+                    <div>
+                      <h3>Name of institution</h3>
+                    </div>
+                    <div>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt eveniet commodi delectus doloremque magnam fuga
+                      consequuntur dignissimos numquam aperiam fugiat nisi odio,
+                      eaque alias ipsum!
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="school">
+                <div class="schoolchild">
+                  <div class="schoolimg">
+                    <img src="highschooe" alt="school image" />
+                  </div>
+                  <div class="school_detail">
+                    <div>
+                      <h3>Name of institution</h3>
+                    </div>
+                    <div>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Deserunt eveniet commodi delectus doloremque magnam fuga
+                      consequuntur dignissimos numquam aperiam fugiat nisi odio,
+                      eaque alias ipsum!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main3">
+            <div>
+              <div>
+                <h3>HTML</h3>
+                <input
+                  type="range"
+                  class="html"
+                  minlength="0"
+                  value="10"
+                  maxlength="100"
+                />
+              </div>
+              <div>
+                <h3>CSS</h3>
+                <input
+                  type="range"
+                  class="html"
+                  minlength="0"
+                  value="90"
+                  maxlength="100"
+                />
+              </div>
+              <div>
+                <h3>Java Script</h3>
+                <input
+                  type="range"
+                  class="html"
+                  minlength="0"
+                  value="50"
+                  maxlength="100"
+                />
+              </div>
+              <div>
+                <h3>Python</h3>
+                <input
+                  type="range"
+                  class="html"
+                  minlength="0"
+                  value="20"
+                  maxlength="100"
+                />
+              </div>
+              <div>
+                <h3>Sql</h3>
+                <input
+                  type="range"
+                  class="html"
+                  minlength="0"
+                  value="80"
+                  maxlength="100"
+                />
+              </div>
+
+              <div>
+                <h3>Django</h3>
+                <input
+                  type="range"
+                  class="html"
+                  minlength="0"
+                  value="65"
+                  maxlength="100"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main1">
+            <div>
+              <div class="greet">
+                <div class="bubble2" class="">
+                  <div class="content">
+                    <p>
+                      Hello! I'm Jiyaullaa Meachanical Engineer based in
+                      Karnataka Lorem ipsum dolor sit amet, consectetur
+                      adipisicing elit. Obcaecati inventore repellendus maiores
+                      fugit dolor, quae, optio atque illum quis iure voluptas
+                      magnam dolores ut eveniet earum! Vero necessitatibus eius
+                      voluptatum quam deserunt sed. Fugiat consequatur tempore
+                      sed. Voluptatem iusto facere provident eveniet earum
+                      impedit sed dicta error, soluta ex dolorum nesciunt
+                      recusandae porro libero sequi maxime aperiam nostrum
+                      excepturi alias aliquid molestias numquam ipsa quibusdam!
+                      Qui soluta, perspiciatis culpa aperiam accusamus nam id
+                      atque officiis debitis dolore fugiat aspernatur nostrum
+                      iure ipsum? Non rerum ad magnam cum vero at modi maxime,
+                      dolorem expedita, ipsum mollitia, harum quas et. Pariatur,
+                      cumque!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="profile_image containers">
+                <div class="triblock">
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab maiores libero vitae quasi, quod suscipit dignissimos officia ad sit soluta!
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab maiores libero vitae quasi, quod suscipit dignissimos officia ad sit soluta!
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab maiores libero vitae quasi, quod suscipit dignissimos officia ad sit soluta!
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab maiores libero vitae quasi, quod suscipit dignissimos officia ad sit soluta!
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab maiores libero vitae quasi, quod suscipit dignissimos officia ad sit soluta!
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab maiores libero vitae quasi, quod suscipit dignissimos officia ad sit soluta!
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab maiores libero vitae quasi, quod suscipit dignissimos officia ad sit soluta!
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab maiores libero vitae quasi, quod suscipit dignissimos officia ad sit soluta!
+                  </div>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab maiores libero vitae quasi, quod suscipit dignissimos officia ad sit soluta!
+                  </div>
+                  
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

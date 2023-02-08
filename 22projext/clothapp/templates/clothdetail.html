@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% include 'boot.html' %}
+
+    <div>
+      {% if cloth %}
+      <h2>these are the details of cloth</h2>
+      
+
+
+      <div class="card m-2" style="width: 18rem">
+        <img src="{{cloth.photo.url}}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{cloth.name}}</h5>
+          <div>
+            <button
+              type="button"
+              class="btn-outline-primary"
+              style="border: 1px solid; border-radius: 5px; height: 35px"
+            >
+              Buy Only for
+              <span class="badge badge-light">{{cloth.price}}</span>
+            </button>
+            <span class="badge badge-warning" style="height: 25px"
+              >offer : <s> {{cloth.offer}} </s>
+            </span>
+          </div>
+          <p class="card-text">{{cloth.desc}}</p>
+          <div>
+            <a href="#" class="card-link">{{cloth.gender}}</a>
+            <a href="#" class="card-link">{{cloth.color}}</a>
+            <a href="#" class="card-body">{{cloth.brand}}</a>
+          </div>
+        </div>
+      </div>
+      {% else %}
+      <h2>cloth are not available</h2>
+      {% endif %}
+    </div>
+  </body>
+</html>

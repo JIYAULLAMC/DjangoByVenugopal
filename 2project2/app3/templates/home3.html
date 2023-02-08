@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .login .register{
+        background-color: aquamarine;
+        width: 400px;
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>Your name is :{{status}}</p>
+    {% if status == "login" %}
+    <form class="login">
+      <div>
+        <label>Enter the first name : </label>
+        <input />
+      </div>
+
+      <div>
+        <label>Enter the password : </label>
+        <input />
+      </div>
+    </form>
+    {% elif status == "register" %}
+    <form class="register">
+      <div>
+        <label>Enter the first name : </label>
+        <input />
+      </div>
+      <div>
+        <label>Enter the first name : </label>
+        <input />
+      </div>
+      <div>
+        <label>Enter the last name : </label>
+        <input />
+      </div>
+      <div>
+        <label>Enter the phone number name : </label>
+        <input />
+      </div>
+      <div>
+        <label>Enter the email name : </label>
+        <input />
+      </div>
+      <div>
+        <label>Enter the password : </label>
+        <input />
+      </div>
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+    {% elif status == "data" %}
+    {% for i in list %}
+    
+    <div>
+        <tr>
+            
+            <td>{{i.firstaname}} </td>
+            <td>{{i.middlename}} </td>
+            <td>{{i.lastname}} </td>
+            <td>{{i.age}} </td>
+            <td>{{i.salary}} </td>
+        </tr>
+    </div>
+    
+    {% endfor %}
+    
+    
+    {% else%}
+    <h1> data is not found </h1>
+    {% endif %}
+  </body>
+</html>

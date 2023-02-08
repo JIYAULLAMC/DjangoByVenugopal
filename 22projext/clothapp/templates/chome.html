@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% include 'boot.html' %}
+
+    <div>
+      <div>
+        {% if allcloths %}
+        <h2 class="alert alert-primary" role="alert" >these are the details of cloths</h2>
+        <div class="card-group d-flex align-content-start flex-wrap" >
+          {% for cloth in allcloths %}
+          <div class="card m-2" style="width: 18rem; min-width:320px;max-height:500px; max-width:320px;">
+            <img src="{{cloth.photo.url}}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{cloth.name}}</h5>
+              <div>
+                <button
+                  type="button"
+                  class="btn-outline-primary"
+                  style="border: 1px solid; border-radius: 5px; height: 35px"
+                >
+                  Buy Only for
+                  <span class="badge badge-light">{{cloth.price}}</span>
+                </button>
+                <span class="badge badge-warning" style="height: 25px"
+                  >offer : <s> {{cloth.offer}} </s>
+                </span>
+              </div>
+              <p class="card-text">{{cloth.desc}}</p>
+              <div>
+                <a href="#" class="card-link">{{cloth.gender}}</a>
+                <a href="#" class="card-link">{{cloth.color}}</a>
+                <a href="#" class="card-body">{{cloth.brand}}</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          
+        </div>
+
+        {% else %}
+        <h2>cloths are not available</h2>
+        {% endif %}
+      </div>
+
+      <div>
+        {% if allcloths %}
+        <h2>these are the details of cloths</h2>
+        <div>
+          <table class="table table-striped" border="1px solid">
+            <tr>
+              <th>id</th>
+              <th>name</th>
+              <th>price</th>
+              <th>offer</th>
+              <th>gender</th>
+              <th>color</th>
+              <th>brand</th>
+              <th>size</th>
+              <th>desc</th>
+              <!-- <th>photo</th> -->
+              <th>image</th>
+            </tr>
+
+            {% for cloth in allcloths %}
+            <tr>
+              <td>{{cloth.id}}</td>
+              <td>{{cloth.name}}</td>
+              <td>{{cloth.price}}</td>
+              <td>{{cloth.offer}}</td>
+              <td>{{cloth.gender}}</td>
+              <td>{{cloth.color}}</td>
+              <td>{{cloth.brand}}</td>
+              <td>{{cloth.size}}</td>
+              <td>{{cloth.desc}}</td>
+              <!-- <td>{{cloth.photo.url}}</td> -->
+              <td>
+                <img
+                  src="{{cloth.photo.url}}"
+                  alt="an cloth image"
+                  width="300px"
+                />
+              </td>
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+
+        {% else %}
+        <h2>cloths are not available</h2>
+        {% endif %}
+      </div>
+    </div>
+
+    <h1>this is cloth home page</h1>
+  </body>
+</html>

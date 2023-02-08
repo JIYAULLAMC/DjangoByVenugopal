@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>chat home page</h1>
+    <li>
+      <a href="{% url 'chat:ccontact' %}">to chat contact page</a>
+    </li>
+    <li>
+      <a href="{% url 'home' %}"> to generic home page </a>
+    </li>
+    <li>
+      <a href="{% url 'base' %}"> to generic base page </a>
+    </li>
+    <li>
+      <a href="{% url 'payment:phome' %}"> to payment home page</a>
+    </li>
+    <li>
+      <a href="{% url 'payment:pcontact' %}"> to payment contact page</a>
+    </li>
+    <li>
+      <a href="{% url 'chat:chome' %}"> to chat home page</a>
+    </li>
+    <li>
+      <a href="{% url 'chat:ccontact' %}"> to chat contact page</a>
+    </li>
+  </body>
+</html>

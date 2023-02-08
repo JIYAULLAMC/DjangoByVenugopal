@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% include 'boot.html' %}
+    <h1>Product Detail Page</h1>
+    {% if product %}
+    <div class="card mb-3 d-flex flex-row" style="width: 900px">
+      <div style="width: 450px" class="d-flex justify-content-center align-self-center">
+        <img
+          src="{{product.photo.url}}"
+          class="card-img-top"
+          alt="image"
+          
+        />
+      </div>
+      <div class="card-body" style="width: 350px">
+        <h5 class="card-title">Card title : {{product.name}}</h5>
+        <table class="table table-striped" style="width: 450px;">
+          <thead>
+            <tr>
+              <th scope="col">Product Details</th>
+              <th scope="col">Product Data </th>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col">Product name </th>
+              <td scope="row">{{product.name}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Product type </th>
+              <td scope="row">{{product.producttype}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Product Color </th>
+              <td scope="row">{{product.color}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Product Brand </th>
+              <td scope="row">{{product.brand}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Prduct Offer </th>
+              <td scope="row" class="bg bg-warning text-black">{{product.offer}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Prduct Price </th>
+              <td scope="row" class="bg bg-success text-white">{{product.price}}</td>
+            </tr>
+            <tr>
+              <th scope="col" >Prduct size </th>
+              <td scope="row" class="text-white bg-primary">{{product.size}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Prduct Desription </th>
+              <td scope="row">{{product.desc}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% else %}
+    <h1>yes we have product</h1>
+    {% endif%}
+  </body>
+</html>
